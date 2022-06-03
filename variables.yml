@@ -1,0 +1,13 @@
+--- #var section
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+  vars:
+    user: appu
+
+  tasks:
+    - name: creating user  
+      user:
+        name: '{{user}}'

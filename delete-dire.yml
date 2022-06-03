@@ -1,0 +1,13 @@
+--- #deleting test directory
+- hosts: all
+  become: yes
+  user: ansible
+  connection: ssh
+  name: dleting dir
+
+  tasks:
+    - name: deleting directory
+      file: 
+        path: /home/ansible/testdir
+        state: absent 
+

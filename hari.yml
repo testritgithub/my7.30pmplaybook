@@ -1,0 +1,16 @@
+- # my sample book
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: creating a file with ansible playbook
+      file: path=/tmp/hari.txt state=touch
+
+
+    - name: creating directory
+      file: path=/tmp/rajdir state=directory
+
+
+

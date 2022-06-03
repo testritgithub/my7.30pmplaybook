@@ -1,0 +1,12 @@
+--- 
+- name: my loops paly book
+  hosts: all
+  user: ansible
+  connection: ssh
+  become: true
+
+  tasks:
+    - name: install packages
+      yum:
+        name: ['git', 'which', 'docker', 'tree', 'wget', 'httpd', 'java']
+        state: present

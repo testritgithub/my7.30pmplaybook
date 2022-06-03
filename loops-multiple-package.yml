@@ -1,0 +1,16 @@
+--- # my loops play book
+- hosts: all
+  user: ansible
+  become: true
+  connection: ssh
+
+  tasks:
+    - name: installing multiple s/w's
+      yum: name='{{item}}' state=present
+      with_items:
+            - httpd
+            - java
+            - git
+            - mysql
+            - tree
+            - docker

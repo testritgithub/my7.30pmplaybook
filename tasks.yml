@@ -1,0 +1,11 @@
+--- # this is tasks section
+- hosts: all
+  user: ansible
+  connection: ssh
+  become: yes
+
+
+  tasks:
+    - name: install httpd s/w
+      yum: name=httpd state=removed
+      

@@ -1,0 +1,11 @@
+--- # delete directory
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: deleting dir
+      file:
+        path: /home/ansible/awsdir
+        state: absent

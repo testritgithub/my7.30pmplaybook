@@ -1,0 +1,14 @@
+--- # installing packages
+- name: i wouldliketo install s/w
+  hosts: all
+  user: ansible
+  connection: ssh
+  become: yes
+     
+  tasks:
+    - name: install docker s/w on hosts
+      yum:
+        name: git*
+        state: absent
+
+

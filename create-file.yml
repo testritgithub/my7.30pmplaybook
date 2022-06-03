@@ -1,0 +1,12 @@
+--- # file creations
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+
+  tasks:
+    - name: creating file
+      file:
+        path: /home/ansible/projectworkfile1
+        state: touch

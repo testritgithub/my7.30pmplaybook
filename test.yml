@@ -1,0 +1,10 @@
+--- # this is one test file
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+
+  tasks:
+     - name: installing git s/w on webservers
+       action: yum name=git

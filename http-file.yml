@@ -1,0 +1,10 @@
+--- # install httpd on webservers
+- hosts: webservers
+  name: installing web server
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: install httpd on webservers
+      action: yum name=httpd state=installed
